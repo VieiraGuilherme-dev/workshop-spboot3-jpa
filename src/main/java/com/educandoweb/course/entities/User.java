@@ -1,29 +1,23 @@
-package com.educandoweb.course.entities;
+// src/main/java/com/educandoweb/course/entities/User.java
+package com.educandoweb.course.entities; // Mantenha no pacote 'entities'
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tb_user")
+@Table(name = "tb_user") // Nome da tabela no banco (mantenha tb_user do seu log)
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Para ID auto-incremento (como no seu log)
     private Long id;
     private String name;
     private String email;
-    private String phone;
-    private String password;
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "client")
-    private List<Order> orders = new ArrayList<>(); // Renomeado para 'orders' para melhor semântica
+    private String phone; // Adicionado com base no seu log de DDL
+    private String password; // Adicionado com base no seu log de DDL
 
     public User() {
     }
@@ -36,6 +30,7 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    // --- Getters e Setters ---
     public Long getId() {
         return id;
     }
@@ -76,12 +71,10 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public List<Order> getOrders() {
-        return orders;
-    }
-
+    // --- equals e hashCode ---
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return Objects.equals(id, user.id);
@@ -89,6 +82,6 @@ public class User implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return Objects.hash(id);
     }
 }
