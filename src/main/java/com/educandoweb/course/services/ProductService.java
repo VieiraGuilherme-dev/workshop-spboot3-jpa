@@ -1,4 +1,3 @@
-// src/main/java/com/educandoweb/course/services/ProductService.java
 package com.educandoweb.course.services;
 
 import com.educandoweb.course.entities.Product;
