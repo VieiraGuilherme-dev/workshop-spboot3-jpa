@@ -1,11 +1,11 @@
-# ⚙️ Web Services com Spring Boot, JPA e Hibernate
+#  Web Services com Spring Boot, JPA e Hibernate
 
 Este projeto é uma **API RESTful** desenvolvida em **Java 17** com **Spring Boot**, utilizando **JPA/Hibernate** para persistência de dados e banco **PostgreSQL** (com H2 para testes).  
 O sistema segue uma arquitetura em camadas (Controller → Service → Repository → Model), implementa CRUD completo, relacionamentos entre entidades e tratamento personalizado de exceções.
 
 ---
 
-## 📌 Funcionalidades
+## Funcionalidades
 
 - CRUD completo para **usuários, produtos, categorias, pedidos e pagamentos**.
 - Relacionamentos **One-to-One**, **One-to-Many** e **Many-to-Many**.
@@ -19,20 +19,8 @@ O sistema segue uma arquitetura em camadas (Controller → Service → Repositor
 
 ---
 
-## 🗂️ Estrutura do Projeto
-src/
-└── main/
-├── java/
-│ ├── controller/ # Endpoints REST (Resource Layer)
-│ ├── service/ # Regras de negócio
-│ ├── repository/ # Interfaces de acesso a dados
-│ └── model/ # Entidades JPA e enums
-└── resources/
-├── application.properties
-├── application-test.properties
-├── application-dev.properties
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 ![Java](https://img.shields.io/badge/Java%2017-ED8B00?style=for-the-badge&logo=java&logoColor=white)  
 • Linguagem principal do projeto.
@@ -57,7 +45,7 @@ src/
 
 ---
 
-## 📄 Endpoints Principais
+## Endpoints Principais
 
 - `GET /users` → Lista todos os usuários.  
 - `GET /users/{id}` → Busca usuário por ID.  
@@ -69,7 +57,7 @@ Também existem endpoints para **Orders**, **Products**, **Categories** e **Paym
 
 ---
 
-## ⚙️ Perfis de Execução
+##  Perfis de Execução
 
 **🔹 Test (H2)**  
 Banco em memória para desenvolvimento rápido e testes.  
