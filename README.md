@@ -106,5 +106,4 @@ mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ✅ Script de inicialização do banco.
 
 ✅ Deploy funcional no Heroku.
-
 CONTATO - gv524003@gmail.com
